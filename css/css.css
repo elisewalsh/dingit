@@ -2,6 +2,8 @@
 	--primary-color: #14426F;
 	--secondary-color: #84C3BF;
 	--body-color: #999;
+	--body-font: 'Source Sans Pro';
+	--heading-font: 'Arvo', serif;
 	--font-scale: calc(100% + .25vw);
 }
 
@@ -12,6 +14,8 @@
 
 html{
 	font: 100%/1.15 sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Arvo', serif;
 	background-color: #fff;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -28,14 +32,14 @@ body {
 }
 
 h1, h2{
-	font-family: Choplin;
+	font-family: var(--heading-font);
 }
 
 h3,
 h4,
 h5,
 h6{
-	font-family: Proxima Nova;
+	font-family: var(--body-font);
 }
 
 
@@ -49,7 +53,7 @@ h6{
 
 .heading h1{
 	color: #1B3053;
-	font-family: Choplin;
+	font-family: var(--heading-font);
 	font-size: 4.3em;
 	margin: 0;
 	padding-bottom: .5em;
