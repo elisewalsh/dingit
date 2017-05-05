@@ -8,6 +8,7 @@
 <meta name="author" content="Elise Walsh">
 <link rel="stylesheet" type="text/css" href="css/css.css">
 <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
+<script src="js/js.js" async></script>
 
 <title>Ding It</title>
 </head>
@@ -27,53 +28,57 @@
 
 <!-- Navigation -->
 
-<div id="nav">
-  <details>
-    <summary><b class="visuallyhidden">explore</b></summary>
+<div class="nav">
 
-    <nav role"navigation">
+      <nav id="menu">
 
-      <ul>
+        <ul>
 
-        <li>
-          <a href="index.html">News</a>
-        </li>
+          <li>
+            <details id="news">
+              <summary>
+              <b><a href="index.html">News</a></b>
+              </summary>
+            </details>
+          </li>
 
-        <li>
-          <details>
-          <summary>Gear</summary>
-            <ul>
-              <li><a href="">Fins</a></li>
-              <li><a href="">Paddles</a></li>
-              <li><a href="">Boards</a></li>
-            </ul>
-          </details>
-        </li>
+          <li>
+            <details id="gear">
+              <summary><b>Gear</b></summary>
+              <ul>
+                <li><a href="#">Fins</a></li>
+                <li><a href="#">Paddles</a></li>
+                <li><a href="#">Boards</a></li>
+              </ul>
+            </details>
+          </li>
 
-        <li>
-          <details>
-          <summary>Races</summary>
-            <ul>
-              <li><a href="">East Coast</a></li>
-              <li><a href="">Central</a></li>
-              <li><a href="">West Coast</a></li>
-            </ul>
-          </details>
-        </li>
+          <li>
+            <details id="races">
+            <summary><b>Races</b></summary>
+              <ul>
+                <li><a href="#">East Coast</a></li>
+                <li><a href="#">Central</a></li>
+                <li><a href="#">West Coast</a></li>
+              </ul>
+            </details>
+          </li>
+
       </ul>
 
     </nav>
-  </details>
+
 </div>
 
 
 <!-- Start Main Content -->
 
-<div id="main">
-
+<div id="subheading">
     <h2>News</h2>
-
     <hr>
+</div>
+
+<div id="main">
 
 <main>
 
@@ -81,9 +86,9 @@
     <div class="bertish" id="bertish">
         <details>
           <summary>
-          <img alt="Chris Bertish (Photograph)" src="img/chris-bertish-large.jpg" srcset="img/chris-bertish-x3.jpg, img/chris-bertish-large.jpg">
+            <img alt="Chris Bertish (Photograph)" src="img/chris-bertish-large.jpg" srcset="img/chris-bertish-x3.jpg, img/chris-bertish-large.jpg">
 
-          <h4>Chris Bertish: Completes Transatlantic Crossing</h4>
+            <h4>Chris Bertish: Completes Transatlantic Crossing</h4>
           </summary>
 
           <p>On March 9th 2017 Chris Bertish completes the first transatlantic voyage on a stand up paddlboard. He spent 93 days alone at sea and completed over 2 million paddlestrokes to cover 4,050 nautical miles. </p>

@@ -13,7 +13,7 @@
 @font-face {
     font-family: 'muller';
     src: url('muller-extrabold-demo-webfont.woff2') format('woff2'),
-         url('muller-extrabold-demo-webfont.woff') format('woff');
+    url('muller-extrabold-demo-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -45,7 +45,8 @@ h1, h2{
 h3,
 h4,
 h5,
-h6{
+h6,
+p{
 	font-family: var(--body-font);
 }
 
@@ -91,120 +92,118 @@ h6{
 	letter-spacing: .1em;
 }
 
-/* hr trial movement */
+/*---- nav beginning ----*/
 
-/*.heading hr {
-  display: inline-block;
-  width: 1.4em;
-  transform: skew(20deg);
-	padding: 4px;
-  color: white;
-  margin-right: 5px;
-  margin-left: 5px;
-  animation: shake 2s infinite;
-  animation-direction: alternate;
-	border-top: 3px solid white;
-	border-left: none;
-	border-right: none;
-	border-bottom: none;
-}*/
+nav{
+	position: relative;
+	text-align: center;
+	/*border: 1px solid #000;*/
+	padding: 1em 0;
+	background: var(--primary-color);
+}
 
-/*@keyframes shake {
-  0% {
-    transform: skewY(20deg);
-  }
-  100% {
-    transform: skewY(-20deg);
-  }
-}*/
+nav ul{
+	list-style: none;
+	padding-left: 2.5em;
+	margin: 0;
+	overflow: hidden;
+	text-decoration: none;
+	font-family: var(--body-font);
+}
 
+nav details li{
+	display: inline;
+	margin: 0 1.5em;
+}
 
-nav h3{
+nav li a{
+	display: inline-block;
+}
+
+nav summary{
+	cursor: pointer;
+	visibility: hidden;
+}
+
+nav summary b{
+	width: 100%;
+	visibility: visible;
+	padding-bottom: 0;
+	color: white;
+	margin: none;
+}
+
+nav details{
+	float: left;
+	width: 33.33%;
+	/*border: 1px solid #000;*/
+}
+
+nav a{
+	text-decoration: none;
+	color: white;
+	font-family: var(--body-font);
+	font-weight: bolder;
+}
+
+nav details[open] a{
 	color: var(--primary-color);
 }
 
-/* nav begins */
+nav details[open]{
+	padding-bottom: 2em;
+}
 
-#nav .visuallyhidden{
-	border: 0;
-	clip: rect(0 0 0 0);
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
+nav details ul{
 	position: absolute;
-}
-
-#nav nav ul{
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-#nav nav li{
-	display: inline;
-}
-
-#nav nav a {
-	display: block;
-	max-width: 5em;
-	text-decoration: none;
-	color: #000033;
-	letter-spacing: .13em;
-	line-height: 1;
-}
-
-#nav details {
-	display: block;
-	overflow: hidden;
-	}
-
-
-#nav summary {
-	float: left;
-	background: var(--primary-color);
+	left: 0;
+	bottom: 0;
 	width: 100%;
-	padding-top: .5em;
-	padding-bottom: .5em;
-	cursor: pointer;
-	outline: none;
+	background: #ccc;
+	padding: .5em 0;
+	z-index: 0;
+	padding-left: .5em;
 }
 
-#nav li{
-	font-size: .8em;
-	margin: 0 auto;
+nav details[open] ul{
+	z-index: 1;
 }
 
-#nav summary::before {
-	display: inline-block;
-	font-size: 1.2em;
-	color: white;
-	text-align: center;
-	content: "Explore";
-	}
-
-#nav details[open] summary::before {
-	content: "X";
-	}
-
-
-#nav summary::-webkit-details-marker{
-	display: none;
+#news summary b{
+	border-right: 1px solid white;
+	padding-right: 2.5em;
 }
 
-/* nav end */
+#gear summary b{
+	border-right: 1px solid white;
+	padding-right: 2.5em;
+}
+
+#races summary b{
+	padding-right: 2.5em;
+}
+
+
+/*----nav end----*/
 
 #main{
 	color: var(--body-color);
 	margin: 0 .9em;
+	margin-top: 1em;
 }
 
-#main h2{
+#subheading{
+	margin: 0 .7em;
+}
+
+#subheading h2{
 	color: var(--primary-color);
 	font-size: 2em;
-	margin: 0;
+	margin-top: 2em;
+	margin-bottom: 0;
 }
 
-#main hr{
+#subheading hr{
 	border-top: 5px solid var(--primary-color);
 	border-left: none;
 	border-right: none;
@@ -217,27 +216,27 @@ nav h3{
 	overflow: hidden;
 	margin-bottom: 1em;
 	padding-bottom: 1em;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
 }
 
 #main p{
-	font-size: 1em;
+	font-size: .8em;
 }
 
 
 #main summary h4{
-	margin-top: -3em;
+	margin-top: -.01em;
 	display: block;
-	color: #fff;
-	padding-bottom: 1.5em;
-	font-size: 1.3em;
-	padding: 0 .8em;
-	background: #fff;
+	color: var(--body-color);
+	padding-bottom: .5em;
+	font-size: 1em;
+	margin-bottom: .5em;
 }
 
-#main summary {
-	float: left;
-	cursor: pointer;
-	outline: none;
+#main details {
+
 	/*
 width: 20%;
 	margin: 0 auto;
@@ -245,7 +244,6 @@ width: 20%;
 	text-align: center;
 	box-shadow: 0px 2px 5px #555;
  */
-
 }
 
 
@@ -258,7 +256,6 @@ width: 20%;
 	display: none;
 }
 
-
 /* first media query */
 
 @media (min-width: 30em){
@@ -268,17 +265,91 @@ width: 20%;
 		font-size: var(--font-scale);
 	}
 
+	#news summary b{
+		border-right: none;
+		padding: none;
+	}
+
+	#gear summary b{
+		border-right: none;
+		padding: none;
+	}
+
+	#races summary b{
+		padding-right: 0;
+		padding: none;
+	}
+
+
+
+
 }
 
 @media (min-width: 48em){
 
-	main{
-		display: flex;
+body{
+	display: flex;
+	display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+	flex-direction: column;
+}
+
+main{
+	display: flex;
+}
+
+main section{
+	padding: 1em;
+}
+
+#subheading{
+	visibility: hidden;
+	overflow: hidden;
+	margin: 0;
+	height: 0;
+}
+
+#subheading hr{
+	width: 20%;
+	margin: 0;
+}
+
+#menu{
+		order: 1;
 	}
 
-	#main details {
-		padding: 2em;
-	}
+.heading{
+	order: 2;
+}
+
+#main{
+	order: 3;
+}
+
+nav{
+	text-align: left;
+}
+
+nav ul li{
+	margin: 0;
+}
+
+nav details{
+	width: 18%;
+	padding: 0;
+}
+
+nav details ul li{
+	margin: .8em;
+}
+
+nav details ul{
+	padding-left: 3em;
+}
 
 }
 
