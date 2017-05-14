@@ -258,6 +258,7 @@ width: 20%;
 
 /* first media query */
 
+
 @media (min-width: 30em){
 
 	body{
@@ -265,27 +266,10 @@ width: 20%;
 		font-size: var(--font-scale);
 	}
 
-	#news summary b{
-		border-right: none;
-		padding: none;
-	}
-
-	#gear summary b{
-		border-right: none;
-		padding: none;
-	}
-
-	#races summary b{
-		padding-right: 0;
-		padding: none;
-	}
-
-
-
 
 }
 
-@media (min-width: 48em){
+@media (min-width: 50em){
 
 body{
 	display: flex;
@@ -334,21 +318,22 @@ nav{
 	text-align: left;
 }
 
-nav ul li{
+nav ul {
 	margin: 0;
+	padding: 0;
 }
 
 nav details{
-	width: 18%;
+	width: 13%;
 	padding: 0;
 }
 
 nav details ul li{
-	margin: .8em;
+	margin-right: 1.5em;
 }
 
 nav details ul{
-	padding-left: 3em;
+	margin-left: -.4em;
 }
 
 }

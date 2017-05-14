@@ -1,0 +1,162 @@
+:root{
+	--primary-color: #14426F;
+	--secondary-color: #84C3BF;
+	--body-color: #999;
+	--body-font: 'Avenir';
+	--heading-font: 'muller', sans-serif;
+	--font-scale: calc(100% + .25vw);
+}
+
+/* Teal #84C3BF */
+/* Navy #14426F */
+
+@font-face {
+    font-family: 'muller';
+    src: url('muller-extrabold-demo-webfont.woff2') format('woff2'),
+    url('muller-extrabold-demo-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+html{
+	font: 100%/1.15 sans-serif;
+	font-family: 'Avenir', sans-serif;
+	font-family: 'Muller', sans-serif;
+	background-color: #fff;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+body {
+	margin: 0 auto;
+}
+
+h1, h2{
+	font-family: var(--heading-font);
+}
+
+h3,
+h4,
+h5,
+h6,
+p{
+	font-family: var(--body-font);
+}
+
+
+.heading{
+  background: var(--secondary-color);
+}
+
+.heading h1{
+	color: white;
+	font-family: var(--heading-font) bold;
+	font-size: 3em;
+	margin: 0;
+	padding-bottom: .3em;
+  padding-top: .3em;
+	text-shadow: 1px 1px #14426F, 2px 2px #14426F,
+							 3px 3px #14426F, 4px 4px #14426F,
+							 5px 5px #14426F, 6px 6px #14426F,
+							 7px 7px #14426F, 8px 8px #14426F;
+}
+
+
+
+/*------- navigation --------*/
+
+nav{
+	position: relative;
+	text-align: center;
+	/*border: 1px solid #000;*/
+	padding: 1em 0;
+	background: var(--primary-color);
+}
+
+nav ul{
+	list-style: none;
+	padding-left: 2.5em;
+	margin: 0;
+	overflow: hidden;
+	text-decoration: none;
+	font-family: var(--body-font);
+}
+
+nav details li{
+	display: inline;
+	margin: 0 1.3em;
+}
+
+nav li a{
+	display: inline-block;
+}
+
+nav summary{
+	cursor: pointer;
+	visibility: hidden;
+}
+
+nav summary b{
+	width: 100%;
+	visibility: visible;
+	padding-bottom: 0;
+	color: white;
+	margin: none;
+}
+
+nav details{
+	float: left;
+	width: 33.33%;
+	/*border: 1px solid #000;*/
+}
+
+nav a{
+	text-decoration: none;
+	color: white;
+	font-family: var(--body-font);
+	font-weight: bolder;
+}
+
+nav details[open] a{
+	color: var(--primary-color);
+}
+
+nav details[open]{
+	padding-bottom: 2em;
+}
+
+nav details ul{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: #ccc;
+	padding: .5em 0;
+	z-index: 0;
+	padding-left: .5em;
+}
+
+nav details[open] ul{
+	z-index: 1;
+}
+
+#news summary b{
+	border-right: 1px solid white;
+	padding-right: 2.5em;
+}
+
+#gear summary b{
+	border-right: 1px solid white;
+	padding-right: 2.5em;
+}
+
+#races summary b{
+	padding-right: 2.5em;
+}
